@@ -11,14 +11,14 @@ public class RandomArr {
         for (int i = 1; i < aa + 1; i++) {
             list.add(i);
         }
-        Collections.shuffle(list);
-       int[] ab = list.stream().mapToInt(Integer::valueOf).toArray();
+        Collections.shuffle(list);//打乱顺序
+       int[] ab = list.stream().mapToInt(Integer::valueOf).toArray();//list转化成数组
         return ab;
     }
 
-    private boolean notEmpty(Object object) {
+    private boolean notEmpty(Object object) {//判断输入是否越界
         int aa;
-        if (object instanceof Integer) {
+        if (object instanceof Integer) {//判断是否是int类型
             aa = (int) object;
             if (aa <= 0) {
                 return false;
